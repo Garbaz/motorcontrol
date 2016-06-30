@@ -20,6 +20,7 @@ PINS (On Raspberry Pi B+):
 #include <stdlib.h>
 #include <string.h>
 #include <garbaz/netlib.h> // https://github.com/garbaz/netlib
+#include "defaults.h"
 #include "mcc.h"
 
 #define uint unsigned int
@@ -29,7 +30,6 @@ PINS (On Raspberry Pi B+):
 #define MOTOR_A 0
 #define MOTOR_B 1
 
-#define DEFAULT_PORT "49494"
 #define BUFFER_SIZE  64
 #define BACKLOG      1
 
@@ -42,8 +42,6 @@ PINS (On Raspberry Pi B+):
 #endif
 
 #define ERRPRNT(...) fprintf(stderr,__VA_ARGS__)
-
-#define CMDS 2
 
 void rmchar(char * str, char c);
 
