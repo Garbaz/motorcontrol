@@ -1,1 +1,1 @@
-#define DEFAULT_PORT 49494
+#define DEFAULT_PORT "49494"
