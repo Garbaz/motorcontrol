@@ -49,6 +49,8 @@ TODO:
 #define SDLERR ERR("SDL Error: %s\n", SDL_GetError())
 #define TTFERR ERR("TTF Error: %s\n", TTF_GetError())
 
+#define UPSTATE(id, val) if(key_state[id] != val){key_state[id] = val; state_changed = 1;}
+
 SDL_Window *win;
 SDL_Surface *sfc, *txt;
 SDL_Event e;
@@ -157,30 +159,26 @@ int main(int argc, char *argv[])
 				{
 					case SDLK_w:
 					case SDLK_UP:
-						printf("UP pressed\n");
-						key_state[UP] = 1;
-						state_changed = 1;
+						DPRNT("UP pressed\n");
+						UPSTATE(UP,1);
 						break;
 
 					case SDLK_s:
 					case SDLK_DOWN:
-						printf("DOWN pressed\n");
-						key_state[DOWN] = 1;
-						state_changed = 1;
+						DPRNT("DOWN pressed\n");
+						UPSTATE(DOWN,1);
 						break;
 
 					case SDLK_a:
 					case SDLK_LEFT:
-						printf("LEFT pressed\n");
-						key_state[LEFT] = 1;
-						state_changed = 1;
+						DPRNT("LEFT pressed\n");
+						UPSTATE(LEFT,1);
 						break;
 
 					case SDLK_d:
 					case SDLK_RIGHT:
-						printf("RIGHT pressed\n");
-						key_state[RIGHT] = 1;
-						state_changed = 1;
+						DPRNT("RIGHT pressed\n");
+						UPSTATE(RIGHT,1);
 						break;
 
 					case SDLK_q:
@@ -195,30 +193,26 @@ int main(int argc, char *argv[])
 				{
 					case SDLK_w:
 					case SDLK_UP:
-						printf("UP released\n");
-						key_state[UP] = 0;
-						state_changed = 1;
+						DPRNT("UP released\n");
+						UPSTATE(UP,1);
 						break;
 
 					case SDLK_s:
 					case SDLK_DOWN:
-						printf("DOWN released\n");
-						key_state[DOWN] = 0;
-						state_changed = 1;
+						DPRNT("DOWN released\n");
+						UPSTATE(DOWN,1);
 						break;
 
 					case SDLK_a:
 					case SDLK_LEFT:
-						printf("LEFT released\n");
-						key_state[LEFT] = 0;
-						state_changed = 1;
+						DPRNT("LEFT released\n");
+						UPSTATE(LEFT,1);
 						break;
 
 					case SDLK_d:
 					case SDLK_RIGHT:
-						printf("RIGHT released\n");
-						key_state[RIGHT] = 0;
-						state_changed = 1;
+						DPRNT("RIGHT released\n");
+						UPSTATE(RIGHT,1);
 						break;
 				}
 
