@@ -159,25 +159,25 @@ int main(int argc, char *argv[])
 				{
 					case SDLK_w:
 					case SDLK_UP:
-						DPRNT("UP pressed\n");
+//						DPRNT("UP pressed\n");
 						UPSTATE(UP,1);
 						break;
 
 					case SDLK_s:
 					case SDLK_DOWN:
-						DPRNT("DOWN pressed\n");
+//						DPRNT("DOWN pressed\n");
 						UPSTATE(DOWN,1);
 						break;
 
 					case SDLK_a:
 					case SDLK_LEFT:
-						DPRNT("LEFT pressed\n");
+//						DPRNT("LEFT pressed\n");
 						UPSTATE(LEFT,1);
 						break;
 
 					case SDLK_d:
 					case SDLK_RIGHT:
-						DPRNT("RIGHT pressed\n");
+//						DPRNT("RIGHT pressed\n");
 						UPSTATE(RIGHT,1);
 						break;
 
@@ -193,26 +193,26 @@ int main(int argc, char *argv[])
 				{
 					case SDLK_w:
 					case SDLK_UP:
-						DPRNT("UP released\n");
-						UPSTATE(UP,1);
+//						DPRNT("UP released\n");
+						UPSTATE(UP,0);
 						break;
 
 					case SDLK_s:
 					case SDLK_DOWN:
-						DPRNT("DOWN released\n");
-						UPSTATE(DOWN,1);
+//						DPRNT("DOWN released\n");
+						UPSTATE(DOWN,0);
 						break;
 
 					case SDLK_a:
 					case SDLK_LEFT:
-						DPRNT("LEFT released\n");
-						UPSTATE(LEFT,1);
+//						DPRNT("LEFT released\n");
+						UPSTATE(LEFT,0);
 						break;
 
 					case SDLK_d:
 					case SDLK_RIGHT:
-						DPRNT("RIGHT released\n");
-						UPSTATE(RIGHT,1);
+//						DPRNT("RIGHT released\n");
+						UPSTATE(RIGHT,0);
 						break;
 				}
 
