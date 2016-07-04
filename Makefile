@@ -25,8 +25,12 @@ client_release: mk_bin $(SRC_DIR)/client_mc.c $(SRC_DIR)/defaults.h
 
 client: client_debug
 
-debug: server_debug client_debug
-release: server_release client_release
+both_debug: server_debug client_debug
+both_release: server_release client_release
+both: all_debug
+
+debug: server_debug
+release: server_release
 
 mk_bin:
 	$(CMD_MKDIR) $(BIN_DIR)

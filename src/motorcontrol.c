@@ -172,8 +172,8 @@ int main(int argc, char** argv)
 				ERRPRNT("ERROR (%d): %s\n", bytes_recvd, TRECV_ERR__STR(bytes_recvd));
 				break;
 			}
-			DPRNT("Recieved %d bytes.\n",bytes_recvd);
-			
+			DPRNT("Recieved %s (%d bytes).\n",recv_buffer, bytes_recvd);
+
 			rmchar(recv_buffer,'\n');
 			rmchar(recv_buffer,'\r');
 			
@@ -183,6 +183,7 @@ int main(int argc, char** argv)
 				break;
 			}
 			int motorcmdret = 0;
+
 			if((motorcmdret = motorCommand(recv_buffer)) != 0)
 			{
 				switch(motorcmdret)
