@@ -138,6 +138,7 @@ int main(int argc, char** argv)
 	if((hostfd = tcreate_host(port_buffer)) < 0)
 	{
 		ERRPRNT("ERROR (%d): %s\n",hostfd,TCREATE_HOST_ERR__STR(hostfd));
+		return -1;
 	}
 	DPRNT("done.\n");
 	
